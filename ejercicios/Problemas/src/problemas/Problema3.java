@@ -29,19 +29,31 @@ public class Problema3 {
         double n3 = entrada.nextDouble();
         System.out.println("Ingrese su cuarta nota");
         double n4 = entrada.nextDouble();
-        String mensaje = "";
-        mensaje = obtenerPromedio(n1, n2, n3, n4);
+        String cualitativo = "";
+        cualitativo = obtenerPromedio(n1, n2, n3, n4);
+        System.out.printf("El promedio de las notas: %.2f, %.2f"
+                + ", %.2f, %.2f es %s\n",n1,n2,n3,n4,cualitativo);
     }
 
     public static String obtenerPromedio(double n1, double n2, double n3, double n4) {
         entrada.useLocale(Locale.US);
         double promedio;
-        String promedioc;
+        String cualitativo = "";
         promedio = (n1 + n2 + n3 + n4) / 4;
-        if ((promedio >= 0)&&(promedio < 5)){
-            promedioc
+        if ((promedio >= 0) && (promedio <= 5)) {
+            cualitativo = "Regular";
+        } else {
+            if ((promedio > 5) && (promedio <= 8)) {
+                cualitativo = "Bueno ";
+            } else {
+                if ((promedio > 8) && (promedio <= 9)) {
+                    cualitativo = "Muy Bueno";
+                }else {
+                cualitativo = "Sobresaliente";
+            }
+            } 
         }
-        return promedioc;
+            return cualitativo;
 
+        }
     }
-}
