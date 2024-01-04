@@ -31,8 +31,8 @@ public class Problema3 {
         double n4 = entrada.nextDouble();
         String cualitativo = "";
         cualitativo = obtenerPromedio(n1, n2, n3, n4);
-        System.out.printf("El promedio de las notas: %.2f, %.2f"
-                + ", %.2f, %.2f es %s\n",n1,n2,n3,n4,cualitativo);
+        System.out.printf("El promedio de las notas: %.2f; %.2f"
+                + "; %.2f; %.2f es %s\n",n1,n2,n3,n4,cualitativo);
     }
 
     public static String obtenerPromedio(double n1, double n2, double n3, double n4) {
